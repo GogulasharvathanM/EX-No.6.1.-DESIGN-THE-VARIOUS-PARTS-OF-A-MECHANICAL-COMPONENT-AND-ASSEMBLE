@@ -1,6 +1,6 @@
 # EX-No.6.1. DESIGN THE VARIOUS PARTS OF A MECHANICAL COMPONENT AND ASSEMBLE
 
-## DATE:
+## DATE:19/11/2026
 
 ## AIM: 
 To Design the various parts of a mechanical component and assemble it using a bottom-up approach then convert it into the orthographic view
@@ -25,44 +25,42 @@ The inserted elements update with changes to the original design
 Select the objects to modify then specify the distance or angle. Use set pivot to reposition the manipulator
 
 ## PROCEDURE:
-### STEP 1: 
- Identifying the given model.
+1. Open Autodesk Fusion, start a new design file, and set the document units to millimetres (mm).
+2. Create a sketch on the XY plane for the base mounting plate, dimensioning the outer profile and pivot pin holes.
 
-### STEP 2: Importing the components.
-Firstly, we import all the necessary parts into the assembly project. Here, we use Finger, gear linkage, Secondary Linkage, Base. For, Importing the components into the project, we use the insert derive option in the Insert>Insert Derive.
+<img width="475" height="482" alt="WhatsApp Image 2026-11-25 at 9 22 20 PM" src="https://github.com/user-attachments/assets/c52ad22f-c66e-440b-8c84-1e4a1e206941" />
 
-### STEP 3: 
-We place the base model onto the X-Y plane.
+4. Extrude the base plate profile to the required thickness and save it as a separate component.
+5. Use the built-in Spur Gear generator (under Utilities > Add-Ins) to create two identical spur gears with matching module and tooth counts.
 
-### STEP 4: Aligning the components
-Then we align the imported, Gear linkage model, in its respective slot of the base.
-For aligning the component onto the base, we use the align option, available in Modify>Align.
-For aligning the component onto the base, we first select the “from” coordinates then we select the “To” coordinates in the given base model. At first, the model might not align properly, so, we use the flip option to bring the component to the desired position.
+<img width="471" height="200" alt="WhatsApp Image 2026-11-25 at 9 22 53 PM" src="https://github.com/user-attachments/assets/489c3932-bb6c-4d4f-9dbf-fd076d8a1bdb" />
 
-### STEP 5: 
-We follow the same steps for aligning the components onto their respective      slots on the base component.
+7. Sketch and extrude the inner white parallel connecting links with accurate center-to-center hole distances.
+8. Sketch and extrude the outer gripper arms and angled jaws to match the linkage geometry.
+   
+<img width="862" height="317" alt="WhatsApp Image 2026-11-25 at 9 24 00 PM" src="https://github.com/user-attachments/assets/9659b4fc-8566-466b-a165-9d1a52adf3be" />
 
-### Note: 
-If the components do not fit properly into the slots, it can be moved into the slot using the Move option.
+10. Apply small Fillets and Chamfers to all sharp outer edges and pin holes for smooth mechanical clearance.
+11. Insert all individual components (base plate, two gears, two inner links, and two gripper jaws) into a main assembly file.
+12. Apply a Rigid joint or Ground the base plate so it stays fixed in the workspace.
+13. Use Revolute joints to attach the two spur gears to their respective pivot pins on the base plate.
 
-## INPUT: 
+<img width="776" height="547" alt="WhatsApp Image 2026-11-25 at 9 25 01 PM" src="https://github.com/user-attachments/assets/1571e948-26c4-4398-a551-b51cbe6ea082" />
 
-#### LINKAGE
-![image](https://user-images.githubusercontent.com/113594316/199413513-8fa5b9db-0546-49d0-ad4c-230b22984d3c.png)
+15. Adjust the rotation angle of one gear slightly so its teeth mesh cleanly into the valleys of the second gear without interference.
+16. Create a Motion Link between the two gear revolute joints with a -1 ratio so they rotate in opposite directions at equal speeds.
+17. Connect the inner white links and outer gripper jaws to the base and gears using Revolute joints to complete the four-bar parallel linkage.
 
-#### BASE PLATE  
-![image](https://user-images.githubusercontent.com/113594316/199413545-3b2fd515-6e27-4d28-9da3-c9ce20cb2a42.png)
+ 
 
-#### GEAR LINKAGE
-![image](https://user-images.githubusercontent.com/113594316/199413566-05708531-fc78-44c9-ab98-4f8a9066d318.png)
-
-#### FINGER
-![image](https://user-images.githubusercontent.com/113594316/199413594-5de9578e-5800-4e69-8c76-6a5749e31805.png)
-
-#### ASSEMBLED VIEW
-![image](https://user-images.githubusercontent.com/113594316/199413636-df0a61ce-964f-490d-9a16-e5986ebbf403.png)
+19. Enable Contact Sets or test the range of motion by dragging one gear to verify that the jaws open and close smoothly without colliding.
+20. Save the completed assembly and generate a 2D engineering drawing with exploded and assembled views if required for documentation.
 
 ## OUTPUT:
+
+<img width="962" height="631" alt="{A8D6ADC6-71BC-4825-A43A-BB030051AFE8}" src="https://github.com/user-attachments/assets/67ec52c0-cdfe-4983-bbba-3b3cbad2dbab" />
+
+<img width="1112" height="777" alt="{E0673654-ACE0-4468-BF5C-582EDD0D4DE7}" src="https://github.com/user-attachments/assets/03580287-c080-4458-b59e-cb010fae4cbd" />
 
 ## RESULT:
 Thus, a design of various parts of a mechanical component and assemble it using a bottom-up approach in orthographic view has been done
